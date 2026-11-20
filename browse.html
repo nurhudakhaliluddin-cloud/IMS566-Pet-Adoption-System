@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Your Pet | Pawfect Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="browse-body">
+
+    <!-- NAVIGATION -->
+    <nav class="browse-navbar">
+        <div class="browse-brand">
+            🐾 Pawfect Home
+        </div>
+
+        <div class="browse-nav-links">
+            <a href="browse.html" class="browse-active">Find a Pet</a>
+            <a href="#myApplications">My Applications</a>
+            <span id="adopterName">Adopter</span>
+            <button onclick="logout()" class="browse-logout">Logout</button>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <section class="browse-hero">
+
+        <div>
+            <span class="hero-label">FIND YOUR NEW BEST FRIEND</span>
+
+            <h1>Give a Pet a<br>Forever Home. 🩷</h1>
+
+            <p>
+                Every pet deserves love, care and a family.
+                Find your perfect companion today!
+            </p>
+
+            <a href="#petGallery" class="hero-button">
+                Explore Pets
+            </a>
+        </div>
+
+        <div class="hero-pets">
+            🐶 🐱 🐰
+        </div>
+
+    </section>
+
+
+    <!-- PET GALLERY -->
+    <section class="browse-section" id="petGallery">
+
+        <div class="text-center mb-4">
+            <h2>Meet Our Lovely Pets</h2>
+
+            <p class="text-muted">
+                Find a furry friend waiting for a loving home.
+            </p>
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="row g-3 browse-filters">
+
+            <div class="col-md-7">
+                <input
+                    type="text"
+                    id="browseSearch"
+                    class="form-control"
+                    placeholder="🔍 Search pet name or breed..."
+                >
+            </div>
+
+            <div class="col-md-5">
+                <select id="browseFilter" class="form-select">
+                    <option value="All">All Pet Types</option>
+                    <option value="Dog">Dogs</option>
+                    <option value="Cat">Cats</option>
+                    <option value="Rabbit">Rabbits</option>
+                    <option value="Bird">Birds</option>
+                    <option value="Other">Others</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <!-- PET CARDS -->
+        <div class="row g-4 mt-2" id="publicPetGallery">
+        </div>
+
+    </section>
+
+
+    <!-- MY APPLICATIONS -->
+    <section class="browse-section application-history" id="myApplications">
+
+        <div class="text-center mb-4">
+            <h2>My Adoption Applications</h2>
+
+            <p class="text-muted">
+                Keep track of your adoption requests.
+            </p>
+        </div>
+
+        <div class="dashboard-card">
+
+            <div class="table-responsive">
+
+                <table class="table align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Application Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="myApplicationsBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- APPLICATION MODAL -->
+    <div class="modal fade" id="adoptionModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content adoption-modal">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Apply for Adoption 🐾</h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <p class="text-muted small">
+                        Complete this form to request adoption.
+                    </p>
+
+                    <form id="adoptionForm">
+
+                        <input type="hidden" id="selectedPetId">
+
+                        <div class="mb-3">
+                            <label class="form-label">Selected Pet</label>
+                            <input
+                                type="text"
+                                id="selectedPetName"
+                                class="form-control"
+                                readonly
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input
+                                type="text"
+                                id="applicantName"
+                                class="form-control"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input
+                                type="email"
+                                id="applicantEmail"
+                                class="form-control"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="applicantPhone"
+                                class="form-control"
+                                placeholder="e.g. 0123456789"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Why would you like to adopt this pet?
+                            </label>
+
+                            <textarea
+                                id="adoptionReason"
+                                class="form-control"
+                                rows="3"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-pink">
+                            Submit Application ❤️
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="browse-footer">
+        <h5>🐾 Pawfect Home</h5>
+        <p>Every pet deserves a loving home. Made with ❤️</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

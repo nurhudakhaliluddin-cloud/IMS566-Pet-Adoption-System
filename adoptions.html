@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adoption Applications | Pawfect Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <span>🐾</span>
+            <h4>Pawfect Home</h4>
+            <small>Pet Adoption System</small>
+        </div>
+
+        <p class="menu-label">MAIN MENU</p>
+
+        <a href="dashboard.html" class="nav-link">🏠 Dashboard</a>
+        <a href="pets.html" class="nav-link">🐶 Pet Management</a>
+        <a href="adoptions.html" class="nav-link active">📋 Adoption Applications</a>
+        <a href="reports.html" class="nav-link">📊 Reports</a>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="nav-link" onclick="logout(); return false;">
+                🚪 Logout
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="dashboard-main">
+
+        <div class="dashboard-topbar">
+            <div>
+                <h3>Adoption Applications 📋</h3>
+                <p>Review and manage pet adoption requests.</p>
+            </div>
+
+            <div class="admin-profile">
+                <span class="profile-icon">👩🏻</span>
+                <div>
+                    <strong>System Administrator</strong>
+                    <small>Admin</small>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- WELCOME BANNER -->
+        <div class="welcome-banner">
+            <div>
+                <h2>Every Adoption Starts with Love! ❤️</h2>
+                <p>Help connect loving families with their perfect pets.</p>
+            </div>
+            <div class="welcome-emoji">🐶 🐱</div>
+        </div>
+
+
+        <!-- APPLICATION STATISTICS -->
+        <div class="row g-3 mb-4">
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <p>Total Applications</p>
+                    <h2 id="totalApplications">0</h2>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <p>Pending</p>
+                    <h2 id="pendingCount">0</h2>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <p>Approved</p>
+                    <h2 id="approvedCount">0</h2>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                    <div class="stat-icon">❌</div>
+                    <p>Rejected</p>
+                    <h2 id="rejectedCount">0</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- APPLICATION TABLE -->
+        <div class="dashboard-card">
+
+            <div class="mb-4">
+                <h5>Application Records</h5>
+                <p class="text-muted small">
+                    View applicant information and update application status.
+                </p>
+            </div>
+
+
+            <!-- SEARCH AND FILTER -->
+            <div class="row g-3 mb-4">
+
+                <div class="col-md-7">
+                    <input
+                        type="text"
+                        id="applicationSearch"
+                        class="form-control"
+                        placeholder="🔍 Search applicant or pet name..."
+                    >
+                </div>
+
+                <div class="col-md-5">
+                    <select id="applicationFilter" class="form-select">
+                        <option value="All">All Applications</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Approved">Approved</option>
+                        <option value="Rejected">Rejected</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="table align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>Applicant</th>
+                            <th>Email</th>
+                            <th>Pet Name</th>
+                            <th>Application Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationTableBody"></tbody>
+
+                </table>
+
+            </div>
+
+            <p class="text-muted small mb-0">
+                Applications submitted by registered adopters will appear here.
+            </p>
+
+        </div>
+
+
+        <footer class="dashboard-footer">
+            Made with ❤️ for every furry friend.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

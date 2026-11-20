@@ -1,0 +1,1090 @@
+
+/* =================================
+   PET ADOPTION MANAGEMENT SYSTEM
+   Pink and Beige Theme
+================================= */
+
+:root {
+    --pink: #e99aaa;
+    --dark-pink: #cf7188;
+    --light-pink: #fff0f2;
+    --cream: #fff9f5;
+    --beige: #f5e8dc;
+    --dark: #55434a;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+}
+
+/* LOGIN PAGE */
+
+.login-body {
+    background: linear-gradient(135deg, #fff0f2, #f8e8df);
+}
+
+.login-container {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(120, 70, 80, 0.12);
+}
+
+/* LEFT IMAGE SECTION */
+
+.login-image {
+    background: linear-gradient(145deg, #e9a0af, #d98298);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 45px 30px;
+}
+
+.image-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.image-content p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.pet-icon {
+    font-size: 65px;
+}
+
+.pet-decoration {
+    font-size: 35px;
+    margin-top: 35px;
+}
+
+/* RIGHT FORM SECTION */
+
+.login-form-section {
+    padding: 45px;
+}
+
+.brand-title {
+    color: var(--dark-pink);
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.form-heading {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* TABS */
+
+.auth-tabs {
+    display: flex;
+    background: var(--light-pink);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.auth-tab {
+    width: 50%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--dark);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.auth-tab.active {
+    background: var(--pink);
+    color: white;
+}
+
+/* INPUTS */
+
+.login-form-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login-form-section .form-control {
+    border: 1px solid #eadde0;
+    border-radius: 9px;
+    padding: 12px;
+    font-size: 13px;
+}
+
+.login-form-section .form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 3px rgba(233, 154, 170, 0.15);
+}
+
+/* BUTTON */
+
+.btn-pink {
+    width: 100%;
+    border: none;
+    background: var(--pink);
+    color: white;
+    padding: 13px;
+    border-radius: 9px;
+    margin-top: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-pink:hover {
+    background: var(--dark-pink);
+}
+
+/* MESSAGES */
+
+.message {
+    font-size: 13px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.demo-info {
+    background: var(--light-pink);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+.footer-text {
+    text-align: center;
+    color: #aa9299;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* GENERAL WEBSITE ELEMENTS */
+
+.main-content {
+    padding: 30px;
+}
+
+.page-title {
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.pink-card {
+    background: white;
+    border-radius: 15px;
+    padding: 22px;
+    border: 1px solid #f4e5e8;
+    box-shadow: 0 5px 18px rgba(120, 70, 80, 0.05);
+}
+
+.btn-primary-pink {
+    background: var(--pink);
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+}
+
+.btn-primary-pink:hover {
+    background: var(--dark-pink);
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 767px) {
+
+    .login-image {
+        padding: 30px 20px;
+    }
+
+    .image-content h1 {
+        font-size: 25px;
+    }
+
+    .pet-icon {
+        font-size: 45px;
+    }
+
+    .login-form-section {
+        padding: 30px 22px;
+    }
+
+    .brand-title {
+        font-size: 25px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+}
+
+/* ========================================
+   PAWFECT HOME - ADMIN DASHBOARD
+======================================== */
+
+.dashboard-body {
+    background: #fff8f6;
+    min-height: 100vh;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 245px;
+    min-width: 245px;
+    background: #f5dce4;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-brand {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar-brand span {
+    font-size: 38px;
+}
+
+.sidebar-brand h4 {
+    color: #b85d7b;
+    font-weight: 700;
+    margin: 8px 0 2px;
+}
+
+.sidebar-brand small {
+    color: #94747e;
+    font-size: 11px;
+}
+
+.menu-label {
+    color: #a17c88;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 12px 12px;
+}
+
+.sidebar .nav-link {
+    display: block;
+    color: #74535e;
+    padding: 13px 14px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: #d77e9a;
+    color: white;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+/* MAIN CONTENT */
+
+.dashboard-main {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.dashboard-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dashboard-topbar h3 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.dashboard-topbar p {
+    font-size: 13px;
+    color: #99858b;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-profile strong {
+    display: block;
+    font-size: 13px;
+}
+
+.admin-profile small {
+    color: #a18b91;
+    font-size: 11px;
+}
+
+.profile-icon {
+    background: #f5dce4;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+/* WELCOME BANNER */
+
+.welcome-banner {
+    background: linear-gradient(120deg, #e9a2b6, #d87e9c);
+    border-radius: 18px;
+    padding: 28px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.welcome-banner h2 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.welcome-banner p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.welcome-emoji {
+    font-size: 45px;
+}
+
+/* STATISTICS */
+
+.section-heading {
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #f4e5e9;
+    padding: 20px;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(120, 70, 80, 0.04);
+}
+
+.stat-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #99858b;
+    margin-bottom: 5px;
+}
+
+.stat-card h2 {
+    color: #c86e8b;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.stat-card small {
+    font-size: 10px;
+    color: #a99ba0;
+}
+
+/* DASHBOARD CARDS */
+
+.dashboard-card {
+    background: white;
+    border: 1px solid #f4e5e9;
+    border-radius: 15px;
+    padding: 23px;
+    box-shadow: 0 5px 15px rgba(120, 70, 80, 0.04);
+}
+
+.dashboard-card h5 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.chart-container {
+    position: relative;
+    height: 270px;
+    width: 100%;
+}
+
+/* QUICK ACTIONS */
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    margin-top: 10px;
+    background: #fff5f6;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #654b54;
+    transition: 0.3s;
+}
+
+.quick-action:hover {
+    background: #f5dce4;
+    color: #b85d7b;
+}
+
+.quick-action span {
+    font-size: 23px;
+}
+
+.quick-action strong {
+    display: block;
+    font-size: 12px;
+}
+
+.quick-action small {
+    color: #a18b91;
+    font-size: 10px;
+}
+
+.view-link {
+    color: #c86e8b;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* TABLE */
+
+.dashboard-card .table {
+    font-size: 12px;
+}
+
+.dashboard-card thead th {
+    color: #a17c88;
+    font-weight: 600;
+    background: #fff5f6;
+    border: none;
+}
+
+.dashboard-card tbody td {
+    color: #705b63;
+}
+
+.status-badge {
+    background: #fce5ec;
+    color: #bb6480;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 10px;
+}
+
+/* FOOTER */
+
+.dashboard-footer {
+    text-align: center;
+    color: #b49da5;
+    font-size: 11px;
+    padding: 30px 0 10px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        padding: 15px;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 15px;
+    }
+
+    .sidebar .nav-link {
+        display: inline-block;
+        margin: 3px;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .menu-label {
+        display: none;
+    }
+
+    .sidebar-bottom {
+        margin-top: 5px;
+    }
+
+    .dashboard-main {
+        padding: 18px;
+    }
+
+    .dashboard-topbar h3 {
+        font-size: 21px;
+    }
+
+    .welcome-banner {
+        padding: 20px;
+    }
+
+    .welcome-banner h2 {
+        font-size: 18px;
+    }
+
+    .welcome-emoji {
+        font-size: 30px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h2 {
+        font-size: 23px;
+    }
+
+    .admin-profile {
+        gap: 5px;
+    }
+}
+
+/* =====================================
+   PET MANAGEMENT PAGE
+===================================== */
+
+#petFormSection {
+    border-top: 4px solid #e99aaa;
+}
+
+#petFormSection label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #74535e;
+}
+
+#petFormSection .form-control,
+#petFormSection .form-select {
+    border: 1px solid #eadde0;
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 13px;
+}
+
+#petFormSection .form-control:focus,
+#petFormSection .form-select:focus {
+    border-color: #e99aaa;
+    box-shadow: 0 0 0 3px rgba(233, 154, 170, 0.15);
+}
+
+#petSearch,
+#petFilter {
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 13px;
+}
+
+.pet-action-btn {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-size: 11px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.edit-pet {
+    background: #fff0f2;
+    color: #b85d7b;
+}
+
+.delete-pet {
+    background: #ffe6e6;
+    color: #c34b60;
+}
+
+.pet-table-emoji {
+    font-size: 25px;
+}
+
+.pet-status-available {
+    background: #e4f5e9;
+    color: #378653;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 10px;
+}
+
+.pet-status-adopted {
+    background: #fce5ec;
+    color: #bb6480;
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 10px;
+}
+
+#petTableBody td {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    .pet-action-btn {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* =====================================
+   ADOPTION APPLICATIONS PAGE
+===================================== */
+
+#applicationSearch,
+#applicationFilter {
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 13px;
+}
+
+.application-pending {
+    background: #fff1d9;
+    color: #b47b25;
+}
+
+.application-approved {
+    background: #e4f5e9;
+    color: #378653;
+}
+
+.application-rejected {
+    background: #ffe6e6;
+    color: #c34b60;
+}
+
+.application-pending,
+.application-approved,
+.application-rejected {
+    border-radius: 20px;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.application-action {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 11px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.approve-btn {
+    background: #e4f5e9;
+    color: #378653;
+}
+
+.reject-btn {
+    background: #ffe6e6;
+    color: #c34b60;
+}
+
+.application-action:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#applicationTableBody td {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    .application-action {
+        display: block;
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* =====================================
+   PUBLIC ADOPTER INTERFACE
+===================================== */
+
+.browse-body {
+    background: #fff9f6;
+}
+
+/* NAVIGATION */
+
+.browse-navbar {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(120, 70, 80, 0.06);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.browse-brand {
+    font-size: 21px;
+    font-weight: 700;
+    color: #c86e8b;
+}
+
+.browse-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.browse-nav-links a {
+    color: #74535e;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.browse-nav-links a:hover,
+.browse-nav-links a.browse-active {
+    color: #cf7188;
+}
+
+.browse-nav-links span {
+    font-size: 12px;
+    color: #74535e;
+}
+
+.browse-logout {
+    border: none;
+    background: #f5dce4;
+    color: #b85d7b;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+/* HERO */
+
+.browse-hero {
+    margin: 35px auto;
+    width: 88%;
+    min-height: 270px;
+    background: linear-gradient(120deg, #e9a2b6, #d77e9a);
+    color: white;
+    border-radius: 22px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.browse-hero h1 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.browse-hero p {
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 430px;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 15px;
+    background: white;
+    color: #bd6985;
+    padding: 12px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-button:hover {
+    background: #fff0f3;
+    color: #bd6985;
+}
+
+.hero-pets {
+    font-size: 75px;
+}
+
+/* PAGE SECTIONS */
+
+.browse-section {
+    width: 88%;
+    margin: 55px auto;
+}
+
+.browse-section h2 {
+    color: #805765;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.browse-filters input,
+.browse-filters select {
+    padding: 12px;
+    border: 1px solid #f0dce2;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* PET CARDS */
+
+.public-pet-card {
+    background: white;
+    border: 1px solid #f3e3e8;
+    border-radius: 17px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 5px 18px rgba(120, 70, 80, 0.05);
+    transition: 0.3s;
+}
+
+.public-pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(120, 70, 80, 0.10);
+}
+
+.public-pet-image {
+    background: #f9e6eb;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.public-pet-details {
+    padding: 20px;
+}
+
+.public-pet-details h5 {
+    color: #805765;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.public-pet-details p {
+    color: #99858b;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.pet-detail-label {
+    display: inline-block;
+    background: #fff0f3;
+    color: #bd6985;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    margin: 3px 2px;
+}
+
+.adopt-button {
+    width: 100%;
+    border: none;
+    background: #e99aaa;
+    color: white;
+    padding: 11px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.adopt-button:hover {
+    background: #cf7188;
+}
+
+/* APPLICATION MODAL */
+
+.adoption-modal {
+    border: none;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.adoption-modal .modal-header {
+    background: #f9e6eb;
+    color: #805765;
+}
+
+.adoption-modal .form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #74535e;
+}
+
+.adoption-modal .form-control {
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 12px;
+}
+
+/* HISTORY */
+
+.application-history {
+    scroll-margin-top: 30px;
+}
+
+.browse-footer {
+    background: #f5dce4;
+    color: #805765;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.browse-footer h5 {
+    font-weight: 700;
+}
+
+.browse-footer p {
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+    .browse-navbar {
+        padding: 15px 5%;
+    }
+
+    .browse-nav-links {
+        gap: 12px;
+    }
+
+    .browse-hero {
+        width: 92%;
+        padding: 25px;
+        min-height: 230px;
+    }
+
+    .browse-hero h1 {
+        font-size: 27px;
+    }
+
+    .hero-pets {
+        font-size: 38px;
+    }
+
+    .browse-section {
+        width: 92%;
+    }
+
+}
+
+/* =====================================
+   REPORTS AND ANALYTICS
+===================================== */
+
+.report-chart-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin-top: 20px;
+}
+
+.report-chart-container canvas {
+    max-width: 100%;
+}
+
+#petSummaryTable td {
+    font-size: 12px;
+    color: #705b63;
+}
+
+#petSummaryTable th {
+    font-size: 12px;
+    background: #fff5f6;
+    color: #a17c88;
+}
+
+@media (max-width: 767px) {
+
+    .report-chart-container {
+        height: 230px;
+    }
+
+}
+
+/* PET PROFILE IMAGES */
+
+.public-pet-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    background-color: #fce8f0;
+}
+
+.public-pet-image .pet-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
