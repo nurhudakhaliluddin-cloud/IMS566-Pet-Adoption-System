@@ -1,4 +1,3 @@
-
 // ========================================
 // PET ADOPTION MANAGEMENT SYSTEM
 // Main JavaScript
@@ -53,15 +52,155 @@ const defaultPets = [
         status: "Adopted",
         description: "A sweet little cat with a gentle personality.",
         emoji: "🐈"
+    },
+    {
+        id: 5,
+        name: "Oreo",
+        type: "Cat",
+        breed: "Domestic Shorthair",
+        age: "2 years",
+        gender: "Male",
+        status: "Available",
+        description: "A lovely and playful cat who enjoys exploring and spending time with people.",
+        emoji: "🐱"
+    },
+    {
+        id: 6,
+        name: "Snowy",
+        type: "Dog",
+        breed: "Maltese",
+        age: "2 years",
+        gender: "Female",
+        status: "Available",
+        description: "A beautiful white Maltese with a sweet and gentle personality.",
+        emoji: "🐶"
+    },
+    {
+        id: 7,
+        name: "Kiwi",
+        type: "Bird",
+        breed: "Budgerigar",
+        age: "1 year",
+        gender: "Male",
+        status: "Available",
+        description: "A cheerful bird who loves chirping and interacting with people.",
+        emoji: "🐦"
+    },
+    {
+        id: 8,
+        name: "Snowball",
+        type: "Rabbit",
+        breed: "Holland Lop",
+        age: "2 years",
+        gender: "Female",
+        status: "Available",
+        description: "An adorable rabbit with a gentle and curious personality.",
+        emoji: "🐰"
+    },
+    {
+        id: 9,
+        name: "Hammy",
+        type: "Other",
+        breed: "Syrian Hamster",
+        age: "1 year",
+        gender: "Male",
+        status: "Available",
+        description: "A cute hamster who loves exploring and running on its wheel.",
+        emoji: "🐹"
+    },
+    {
+        id: 10,
+        name: "Shelly",
+        type: "Other",
+        breed: "Red-Eared Slider",
+        age: "3 years",
+        gender: "Female",
+        status: "Available",
+        description: "A lovely turtle who enjoys swimming and basking under warm light.",
+        emoji: "🐢"
+    },
+    {
+        id: 11,
+        name: "Peanut",
+        type: "Other",
+        breed: "American Guinea Pig",
+        age: "1 year",
+        gender: "Female",
+        status: "Available",
+        description: "A gentle guinea pig who enjoys eating vegetables and exploring.",
+        emoji: "🐹"
+    },
+    {
+        id: 12,
+        name: "Spike",
+        type: "Other",
+        breed: "African Pygmy Hedgehog",
+        age: "1 year",
+        gender: "Male",
+        status: "Available",
+        description: "A curious hedgehog who enjoys exploring its surroundings.",
+        emoji: "🦔"
+    },
+    {
+        id: 13,
+        name: "Ash",
+        type: "Cat",
+        breed: "Domestic Shorthair",
+        age: "1 year",
+        gender: "Male",
+        status: "Available",
+        description: "A cute grey kampung cat with a curious and playful personality.",
+        emoji: "🐱"
+    },
+    {
+        id: 14,
+        name: "Mimi",
+        type: "Cat",
+        breed: "Domestic Shorthair",
+        age: "1 year",
+        gender: "Female",
+        status: "Available",
+        description: "A sweet calico kampung cat who enjoys attention and relaxing.",
+        emoji: "🐱"
+    },
+    {
+        id: 15,
+        name: "Oyen",
+        type: "Cat",
+        breed: "Domestic Shorthair",
+        age: "2 years",
+        gender: "Male",
+        status: "Available",
+        description: "A friendly orange kampung cat with a playful personality.",
+        emoji: "🐱"
     }
 ];
 
 // INITIALISE LOCAL STORAGE
 function initialiseData() {
+    let savedPets = JSON.parse(localStorage.getItem("pets")) || [];
 
-    if (!localStorage.getItem("pets")) {
-        localStorage.setItem("pets", JSON.stringify(defaultPets));
-    }
+    defaultPets.forEach(defaultPet => {
+        const alreadyExists = savedPets.some(
+            pet => pet.name.toLowerCase() === defaultPet.name.toLowerCase()
+        );
+
+        if (!alreadyExists) {
+            const newPet = { ...defaultPet };
+
+            const idExists = savedPets.some(
+                pet => pet.id === newPet.id
+            );
+
+            if (idExists) {
+                newPet.id = Date.now() + savedPets.length;
+            }
+
+            savedPets.push(newPet);
+        }
+    });
+
+    localStorage.setItem("pets", JSON.stringify(savedPets));
 
     if (!localStorage.getItem("users")) {
         localStorage.setItem("users", JSON.stringify([]));
@@ -71,6 +210,7 @@ function initialiseData() {
         localStorage.setItem("applications", JSON.stringify([]));
     }
 }
+
 
 initialiseData();
 
